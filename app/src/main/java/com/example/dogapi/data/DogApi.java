@@ -30,18 +30,18 @@ public class DogApi {
 
         RandomBreeds randomBreeds = mRetrofit.create(RandomBreeds.class);
 
-        Call<List<Message>> dogs = randomBreeds.get50Dogs();
+        Call<Message> dogs = randomBreeds.get50Dogs();
 
-        dogs.enqueue(new Callback<List<Message>>() {
+        dogs.enqueue(new Callback<Message>() {
             @Override
-            public void onResponse(Call<List<Message>> call, Response<List<Message>> response) {
+            public void onResponse(Call<Message> call, Response<Message> response) {
                 if(response.isSuccessful()) {
                     Message message = (Message) response.body();
                 }
             }
 
             @Override
-            public void onFailure(Call<List<Message>> call, Throwable t) {
+            public void onFailure(Call<Message> call, Throwable t) {
 
             }
         });

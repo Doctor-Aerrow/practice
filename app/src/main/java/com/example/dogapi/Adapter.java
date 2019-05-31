@@ -28,7 +28,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int i) {
-        Picasso.get().load(dogs[i]).into(myViewHolder.image);
+      //  Picasso.get().load(dogs[i]).into(myViewHolder.image);
     }
 
     @Override

@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView dogList;
     private Adapter dogAdapter;
-    private Message messege;
     private String[] dogs;
 
     @Override
@@ -33,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... voids) {
             DogApi.getInstance();
-            dogs = messege.getMessage();
             dogAdapter = new Adapter(dogs);
 
             LinearLayoutManager manager = new LinearLayoutManager(MainActivity.this);
